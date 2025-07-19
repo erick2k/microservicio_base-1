@@ -51,5 +51,20 @@ def info():
     })
 
 
+@app.route('/api/info_personal', methods=['GET'])
+def info_personal():
+    return jsonify({
+        "dni": "0911446322",
+        "nombres": "CARLOS JOSE",
+        "apellidos": "HERRERA PEREZ",
+        "correo": "erick222k1995@hotmail.com",
+        "sexo": "Masculino",
+        "tel": "0990725765",
+        "fnacimiento": "1995-09-22",
+        "forma_pago": "EFECTIVO",
+        "precio": "50.90"
+    })
+
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
