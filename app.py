@@ -28,6 +28,7 @@ def restar():
     if a is None or b is None:
         return jsonify({'error': 'Parámetros a y b requeridos'}), 400
     return jsonify({'resultado': a - b})
+
 # ERICK HERRERA
 
 
