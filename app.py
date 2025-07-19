@@ -32,6 +32,16 @@ def restar():
 # erick herrera
 
 
+@app.route('/api/multi', methods=['POST'])
+def multi():
+    data = request.get_json()
+    a = data.get('a')
+    b = data.get('b')
+    if a is None or b is None:
+        return jsonify({'error': 'Parámetros a y b requeridos'}), 400
+    return jsonify({'resultado': a * b})
+
+
 @app.route('/api/info', methods=['GET'])
 def info():
     return jsonify({
