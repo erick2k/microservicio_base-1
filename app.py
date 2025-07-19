@@ -33,7 +33,7 @@ def restar():
 
 
 @app.route('/api/multi', methods=['POST'])
-def multi():
+def multi(a, b):
     data = request.get_json()
     a = data.get('a')
     b = data.get('b')
