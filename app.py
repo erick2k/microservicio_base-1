@@ -17,8 +17,6 @@ def sumar():
         return jsonify({'error': 'Parámetros a y b requeridos'}), 400
     return jsonify({'resultado': a + b})
 
-# ERICK HERRERA
-
 
 @app.route('/api/restar', methods=['POST'])
 def restar():
@@ -28,8 +26,6 @@ def restar():
     if a is None or b is None:
         return jsonify({'error': 'Parámetros a y b requeridos'}), 400
     return jsonify({'resultado': a - b})
-
-# ERICK HERRERA
 
 
 @app.route('/api/info', methods=['GET'])
